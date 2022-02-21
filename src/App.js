@@ -25,6 +25,10 @@ function App() {
     }
   };
 
+  function specificNumberOfSlider(number) {
+    setNumberOfSlider(number);
+  }
+
   return (
     <div className='body'>
       <div className="container">
@@ -51,7 +55,8 @@ function App() {
           {
             users.map((user, index) => <p
               key={user.name}
-              className={`user ${numberOfSlider === index && "highlight"}`}>
+              className={`user ${numberOfSlider === index && "highlight"}`}
+              onClick={()=> specificNumberOfSlider(index)}>
               {user.name.charAt(0)}
             </p>)
           }

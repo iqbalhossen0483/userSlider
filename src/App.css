@@ -34,6 +34,7 @@
   padding: 20px;
   font-size: 1.4em;
   font-weight: 600;
+  cursor: pointer;
 }
 .slider-container{
   position: relative;
