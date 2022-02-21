@@ -8,13 +8,21 @@ function App() {
 
 
   function increaseSliderNumber() {
-    if (numberOfSlider === users.length -1) return;
-    setNumberOfSlider(numberOfSlider + 1);
+    if (numberOfSlider === users.length - 1) {
+      setNumberOfSlider(0);
+    }
+    else {
+      setNumberOfSlider(numberOfSlider + 1);
+    }
   };
 
   function decreaseSliderNumber() {
-    if (numberOfSlider === 0) return;
-    setNumberOfSlider(numberOfSlider - 1);
+    if (numberOfSlider === 0) {
+      setNumberOfSlider(users.length - 1);
+    }
+    else {
+      setNumberOfSlider(numberOfSlider - 1);
+    }
   };
 
   return (
